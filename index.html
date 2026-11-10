@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto de Sistema Inteligente de Alerta de Gás com Arduino e sensor MQ-2.">
+    <title>Sistema Inteligente de Alerta de Gás</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container nav">
+        <a href="#inicio" class="logo">SMART<span>GAS</span></a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Abrir menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav id="menu">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#componentes">Componentes</a>
+            <a href="#funcionamento">Funcionamento</a>
+            <a href="#montagem">Montagem</a>
+            <a href="#codigo">Código</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<!-- INÍCIO -->
+<section class="hero" id="inicio">
+    <div class="container hero-content">
+        <div class="hero-text">
+            <span class="tag">PROJETO DE ROBÓTICA E AUTOMAÇÃO</span>
+
+            <h1>Sistema Inteligente
+                <span>de Alerta de Gás</span>
+            </h1>
+
+            <p>
+                Tecnologia, programação e automação trabalhando juntas
+                para identificar a presença de gases e emitir alertas
+                automaticamente.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#sobre" class="btn primary">Conheça o projeto</a>
+                <a href="#montagem" class="btn secondary">Ver montagem</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900"
+                alt="Placa eletrônica e componentes tecnológicos">
+        </div>
+    </div>
+</section>
+
+<!-- SOBRE -->
+<section class="section" id="sobre">
+    <div class="container">
+        <div class="section-heading">
+            <span class="tag">SOBRE O PROJETO</span>
+            <h2>O que é o sistema inteligente?</h2>
+            <p>Conheça a proposta e a importância dessa tecnologia.</p>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-image">
+                <img
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=900"
+                    alt="Desenvolvimento de projeto eletrônico">
+            </div>
+
+            <div class="about-text">
+                <h3>Uma solução baseada em automação</h3>
+
+                <p>
+                    O Sistema Inteligente de Alerta de Gás é um projeto
+                    desenvolvido com Arduino e um sensor MQ-2, capaz
+                    de identificar alterações na presença de determinados
+                    gases e fumaça no ambiente.
+                </p>
+
+                <p>
+                    Quando a leitura do sensor ultrapassa um limite
+                    previamente configurado, o Arduino processa a
+                    informação e aciona automaticamente um conjunto
+                    de alertas visuais e sonoros.
+                </p>
+
+                <p>
+                    O objetivo é demonstrar como a tecnologia pode
+                    contribuir para o monitoramento ambiental e para
+                    a prevenção de situações de risco.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- OBJETIVOS -->
+<section class="section light-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="tag">OBJETIVOS</span>
+            <h2>O que queremos alcançar?</h2>
+        </div>
+
+        <div class="cards">
+            <article class="info-card">
+                <div class="card-icon">🔎</div>
+                <h3>Detecção</h3>
+                <p>Identificar alterações na presença de gases por meio
+                do sensor MQ-2.</p>
+            </article>
+
+            <article class="info-card">
+                <div class="card-icon">🚨</div>
+                <h3>Alerta automático</h3>
+                <p>Acionar sinais sonoros e luminosos quando o limite
+                programado for ultrapassado.</p>
+            </article>
+
+            <article class="info-card">
+                <div class="card-icon">🤖</div>
+                <h3>Automação</h3>
+                <p>Demonstrar a integração entre sensores, programação
+                e componentes eletrônicos.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- COMPONENTES -->
+<section class="section" id="componentes">
+    <div class="container">
+        <div class="section-heading">
+            <span class="tag">MATERIAIS UTILIZADOS</span>
+            <h2>Conheça os componentes</h2>
+            <p>Cada componente possui uma função importante no sistema.</p>
+        </div>
+
+        <div class="components-grid">
+
+            <article class="component-card">
+                <img src="https://images.unsplash.com/photo-1553406830-ef2513450d76?w=600"
+                     alt="Placa eletrônica Arduino">
+                <div class="component-info">
+                    <h3>Arduino Uno</h3>
+                    <p>É o cérebro do projeto. Recebe os dados do sensor
+                    e controla os demais componentes.</p>
+                </div>
+            </article>
+
+            <article class="component-card">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600"
+                     alt="Componentes eletrônicos">
+                <div class="component-info">
+                    <h3>Sensor MQ-2</h3>
+                    <p>Detecta alterações na presença de gases combustíveis
+                    e fumaça no ambiente.</p>
+                </div>
+            </article>
+
+            <article class="component-card">
+                <img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?w=600"
+                     alt="Circuito eletrônico">
+                <div class="component-info">
+                    <h3>Display LCD</h3>
+                    <p>Apresenta os valores de leitura e as mensagens
+                    de funcionamento do sistema.</p>
+                </div>
+            </article>
+
+            <article class="component-card">
+                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600"
+                     alt="Projeto de eletrônica">
+                <div class="component-info">
+                    <h3>Buzzer</h3>
+                    <p>Produz o som de sirene para indicar uma situação
+                    de alerta.</p>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="extra-components">
+            <h3>Outros materiais</h3>
+            <p>LED vermelho, LED verde, resistores de 220 Ω,
+            protoboard, fios jumper e cabo USB.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FUNCIONAMENTO -->
+<section class="section blue-section" id="funcionamento">
+    <div class="container">
+        <div class="section-heading">
+            <span class="tag">COMO FUNCIONA?</span>
+            <h2>Etapas do funcionamento</h2>
+            <p>Entenda como o sistema identifica e responde aos dados.</p>
+        </div>
+
+        <div class="steps">
+            <article class="step">
+                <span>01</span>
+                <h3>Leitura</h3>
+                <p>O sensor MQ-2 realiza a leitura do ambiente.</p>
+            </article>
+
+            <article class="step">
+                <span>02</span>
+                <h3>Processamento</h3>
+                <p>O Arduino recebe e analisa os valores enviados
+                pelo sensor.</p>
+            </article>
+
+            <article class="step">
+                <span>03</span>
+                <h3>Identificação</h3>
+                <p>O sistema compara a leitura com o limite
+                programado.</p>
+            </article>
+
+            <article class="step">
+                <span>04</span>
+                <h3>Alerta</h3>
+                <p>O LED vermelho, a sirene e o display indicam
+                a condição de alerta.</p>
+            </article>
+        </div>
+
+        <div class="operation-panel">
+            <h3>Comportamento do sistema</h3>
+
+            <div class="status-example normal">
+                <strong>🟢 Situação normal</strong>
+                <p>LED verde aceso e sirene desligada.</p>
+            </div>
+
+            <div class="status-example danger">
+                <strong>🔴 Situação de alerta</strong>
+                <p>LED vermelho aceso, sirene ativada e mensagem
+                de alerta no LCD.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MONTAGEM -->
+<section class="section" id="montagem">
+    <div class="container">
+        <div class="section-heading">
+            <span class="tag">GUIA DE MONTAGEM</span>
+            <h2>Como montar o projeto?</h2>
+            <p>Acompanhe as etapas de construção do sistema.</p>// MENU PARA CELULAR
+const menuToggle = document.getElementById("menuToggle");
+const menu = document.getElementById("menu");
+
+menuToggle.addEventListener("click", () => {
+    const aberto = menu.classList.toggle("active");
+
+    menuToggle.setAttribute("aria-expanded", aberto);
+    menuToggle.textContent = aberto ? "✕" : "☰";
+});
+
+// FECHAR MENU AO CLICAR EM UM LINK
+document.querySelectorAll("#menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        menu.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+    });
+});
+
+// BOTAO PARA COPIAR O CODIGO ARDUINO
+const copyButton = document.getElementById("copyButton");
+const arduinoCode = document.getElementById("arduinoCode");
+
+copyButton.addEventListener("click", async () => {
+    try {
+        await navigator.clipboard.writeText(
+            arduinoCode.textContent
+        );
+
+        copyButton.textContent = "Copiado! ✓";
+
+        setTimeout(() => {
+            copyButton.textContent = "Copiar código";
+        }, 2000);
+
+    } catch (erro) {
+        copyButton.textContent = "Não foi possível copiar";
+    }
+});
+
+// ANO AUTOMATICO NO RODAPE
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+        </div>
+
+        <div class="assembly-list">
+
+            <article class="assembly-item">
+                <div class="assembly-number">01</div>
+                <div>
+                    <h3>Preparação dos materiais</h3>
+                    <p>Separe o Arduino Uno, o sensor MQ-2, o display,
+                    o buzzer, os LEDs e os demais componentes.</p>
+                </div>
+            </article>
+
+            <article class="assembly-item">
+                <div class="assembly-number">02</div>
+                <div>
+                    <h3>Conexão do sensor</h3>
+                    <p>Conecte VCC ao 5V, GND ao GND e AO à entrada
+                    analógica A0 do Arduino.</p>
+                </div>
+            </article>
+
+            <article class="assembly-item">
+                <div class="assembly-number">03</div>
+                <div>
+                    <h3>Instalação dos LEDs e buzzer</h3>
+                    <p>Conecte o LED vermelho ao pino 8, o verde ao
+                    pino 7 e o buzzer ao pino 9.</p>
+                </div>
+            </article>
+
+            <article class="assembly-item">
+                <div class="assembly-number">04</div>
+                <div>
+                    <h3>Conexão do display</h3>
+                    <p>Utilize SDA no A4, SCL no A5, VCC no 5V e GND
+                    no GND.</p>
+                </div>
+            </article>
+
+            <article class="assembly-item">
+                <div class="assembly-number">05</div>
+                <div>
+                    <h3>Programação</h3>
+                    <p>Carregue o código na placa Arduino e configure
+                    o limite de leitura de demonstração.</p>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ Atenção:</strong>
+            O projeto é um protótipo educacional. Não realize testes
+            liberando gás inflamável. O MQ-2 exige aquecimento,
+            calibração e não substitui equipamentos certificados
+            de segurança.
+        </div>
+    </div>
+</section>
+
+<!-- CONEXÕES -->
+<section class="section light-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="tag">CONEXÕES ELETRÔNICAS</span>
+            <h2>Mapa de ligações</h2>
+            <p>Confira os pinos utilizados na programação.</p>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Componente</th>
+                        <th>Conexão no Arduino</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Sensor MQ-2 (AO)</td><td>A0</td></tr>
+                    <tr><td>LED vermelho</td><td>8</td></tr>
+                    <tr><td>LED verde</td><td>7</td></tr>
+                    <tr><td>Buzzer passivo</td><td>9</td></tr>
+                    <tr><td>LCD (SDA)</td><td>A4</td></tr>
+                    <tr><td>LCD (SCL)</td><td>A5</td></tr>
+                    <tr><td>Alimentação</td><td>5V e GND, conforme o módulo</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- CÓDIGO -->
+<section class="section" id="codigo">
+    <div class="container">
+        <div class="section-heading">
+            <span class="tag">PROGRAMAÇÃO</span>
+            <h2>O cérebro do projeto</h2>
+            <p>O código controla a leitura do sensor e os alertas.</p>
+        </div>
+
+        <div class="code-card">
+            <div class="code-header">
+                <span>Arduino IDE | C++</span>
+                <button id="copyButton">Copiar código</button>
+            </div>
+
+            <pre><code id="arduinoCode">// Projeto: Sistema Inteligente de Alerta de Gas
+
+#include &lt;Wire.h&gt;
+#include &lt;LiquidCrystal_I2C.h&gt;
+
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+const int sensorGas = A0;
+const int ledVermelho = 8;
+const int ledVerde = 7;
+const int buzzer = 9;
+
+const int limiteGas = 400;
+
+void setup() {
+  pinMode(ledVermelho, OUTPUT);
+  pinMode(ledVerde, OUTPUT);
+  pinMode(buzzer, OUTPUT);
+
+  Serial.begin(9600);
+
+  lcd.init();
+  lcd.backlight();
+
+  lcd.print("Sistema de Gas");
+  lcd.setCursor(0, 1);
+  lcd.print("Iniciando...");
+
+  delay(2000);
+  lcd.clear();
+}
+
+void loop() {
+  int valorGas = analogRead(sensorGas);
+
+  Serial.println(valorGas);
+
+  lcd.setCursor(0, 0);
+  lcd.print("Leitura// MENU PARA CELULAR
+const menuToggle = document.getElementById("menuToggle");
+const menu = document.getElementById("menu");
+
+menuToggle.addEventListener("click", () => {
+    const aberto = menu.classList.toggle("active");
+// MENU PARA CELULAR
+const menuToggle = document.getElementById("menuToggle");
+const menu = document.getElementById("menu");
+
+menuToggle.addEventListener("click", () => {
+    const aberto = menu.classList.toggle("active");
+
+    menuToggle.setAttribute("aria-expanded", aberto);
+    menuToggle.textContent = aberto ? "✕" : "☰";
+});
+
+// FECHAR MENU AO CLICAR EM UM LINK
+document.querySelectorAll("#menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        menu.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+    });
+});
+
+// BOTAO PARA COPIAR O CODIGO ARDUINO
+const copyButton = document.getElementById("copyButton");
+const arduinoCode = document.getElementById("arduinoCode");
+
+copyButton.addEventListener("click", async () => {
+    try {
+        await navigator.clipboard.writeText(// MENU PARA CELULAR
+const menuToggle = document.getElementById("menuToggle");
+const menu = document.getElementById("menu");
+
+menuToggle.addEventListener("click", () => {
+    const aberto = menu.classList.toggle("active");
+
+    menuToggle.setAttribute("aria-expanded", aberto);
+    menuToggle.textContent = aberto ? "✕" : "☰";
+});
+
+// FECHAR MENU AO CLICAR EM UM LINK
+document.querySelectorAll("#menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        menu.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+    });
+});
+
+// BOTAO PARA COPIAR O CODIGO ARDUINO
+const copyButton = document.getElementById("copyButton");
+const arduinoCode = document.getElementById("arduinoCode");
+
+copyButton.addEventListener("click", async () => {
+    try {
+        await navigator.clipboard.writeText(
+            arduinoCode.textContent
+        );
+
+        copyButton.textContent = "Copiado! ✓";
+
+        setTimeout(() => {
+            copyButton.textContent = "Copiar código";
+        }, 2000);
+
+    } catch (erro) {
+        copyButton.textContent = "Não foi possível copiar";
+    }
+});
+
+// ANO AUTOMATICO NO RODAPE
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+            arduinoCode.textContent
+        );
+
+        copyButton.textContent = "Copiado! ✓";
+
+        setTimeout(() => {
+            copyButton.textContent = "Copiar código";
+        }, 2000);
+
+    } catch (erro) {
+        copyButton.textContent = "Não foi possível copiar";
+    }
+});
+
+// ANO AUTOMATICO NO RODAPE
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+    menuToggle.setAttribute("aria-expanded", aberto);
+    menuToggle.textContent = aberto ? "✕" : "☰";
+});
+
+// FECHAR MENU AO CLICAR EM UM LINK
+document.querySelectorAll("#menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        menu.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+    });
+});
+
+// BOTAO PARA COPIAR O CODIGO ARDUINO
+const copyButton = document.getElementById("copyButton");
+const arduinoCode = document.getElementById("arduinoCode");
+
+copyButton.addEventListener("click", async () => {
+    try {
+        await navigator.clipboard.writeText(
+            arduinoCode.textContent
+        );// MENU PARA CELULAR
+const menuToggle = document.getElementById("menuToggle");
+const menu = document.getElementById("menu");
+
+menuToggle.addEventListener("click", () => {
+    const aberto = menu.classList.toggle("active");
+
+    menuToggle.setAttribute("aria-expanded", aberto);
+    menuToggle.textContent = aberto ? "✕" : "☰";
+});
+
+// FECHAR MENU AO CLICAR EM UM LINK
+document.querySelectorAll("#menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        menu.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+    });
+});
+
+// BOTAO PARA COPIAR O CODIGO ARDUINO
+const copyButton = document.getElementById("copyButton");
+const arduinoCode = document.getElementById("arduinoCode");
+// MENU PARA CELULAR
+const menuToggle = document.getElementById("menuToggle");
+const menu = document.getElementById("menu");
+
+menuToggle.addEventListener("click", () => {
+    const aberto = menu.classList.toggle("active");
+
+    menuToggle.setAttribute("aria-expanded", aberto);
+    menuToggle.textContent = aberto ? "✕" : "☰";
+});
+
+// FECHAR MENU AO CLICAR EM UM LINK
+document.querySelectorAll("#menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        menu.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+    });
+});
+
+// BOTAO PARA COPIAR O CODIGO ARDUINO
+const copyButton = document.getElementById("copyButton");
+const arduinoCode = document.getElementById("arduinoCode");
+
+copyButton.addEventListener("click", async () => {
+    try {
+        await navigator.clipboard.writeText(
+            arduinoCode.textContent
+        );
+
+        copyButton.textContent = "Copiado! ✓";
+
+        setTimeout(() => {
+            copyButton.textContent = "Copiar código";
+        }, 2000);
+
+    } catch (erro) {
+        copyButton.textContent = "Não foi possível copiar";
+    }
+});
+
+// ANO AUTOMATICO NO RODAPE
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+copyButton.addEventListener("click", async () => {
+    try {
+        await navigator.clipboard.writeText(
+            arduinoCode.textContent
+        );
+
+        copyButton.textContent = "Copiado! ✓";
+
+        setTimeout(() => {
+            copyButton.textContent = "Copiar código";
+        }, 2000);
+
+    } catch (erro) {
+        copyButton.textContent = "Não foi possível copiar";
+    }
+});
+
+// ANO AUTOMATICO NO RODAPE
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+        copyButton.textContent = "Copiado! ✓";
+
+        setTimeout(() => {
+            copyButton.textContent = "Copiar código";
+        }, 2000);
+
+    } catch (erro) {
+        copyButton.textContent = "Não foi possível copiar";
+    }
+});
+
+// ANO AUTOMATICO NO RODAPE
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+: ");
+  lcd.print(valorGas);
+  lcd.print(" ");
+
+  if (valorGas >= limiteGas) {
+
+    digitalWrite(ledVermelho, HIGH);
+    digitalWrite(ledVerde, LOW);
+
+    lcd.setCursor(0, 1);
+    lcd.print("GAS DETECTADO!");
+
+    for (int f = 700; f &lt;= 1400; f += 100) {
+      tone(buzzer, f);
+      delay(40);
+    }
+
+    for (int f = 1400; f >= 700; f -= 100) {
+      tone(buzzer, f);
+      delay(40);
+    }
+
+    noTone(buzzer);
+
+  } else {
+
+    digitalWrite(ledVermelho, LOW);
+    digitalWrite(ledVerde, HIGH);
+    noTone(buzzer);
+
+    lcd.setCursor(0, 1);
+    lcd.print("Ar: normal ");
+
+    delay(300);
+  }
+}</code></pre>
+        </div>
+
+        <p class="code-note">
+            O valor 400 é apenas um limite inicial de demonstração.
+            Ele precisa ser ajustado conforme as leituras e a calibração
+            do sensor. Este código não é um sistema certificado de segurança.
+        </p>
+    </div>
+</section>
+
+<!-- CONCLUSÃO -->
+<section class="conclusion">
+    <div class="container">
+        <span class="tag">CONSIDERAÇÕES FINAIS</span>
+        <h2>Tecnologia a serviço da segurança</h2>
+        <p>
+            O desenvolvimento deste projeto demonstra como a robótica,
+            a eletrônica e a programação podem trabalhar juntas na criação
+            de soluções inteligentes. A utilização do Arduino com o sensor
+            MQ-2 permite compreender na prática o funcionamento de sistemas
+            automatizados de monitoramento e alerta.
+        </p>
+        <a href="#inicio" class="btn primary">Voltar ao início ↑</a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <h3>SMART<span>GAS</span></h3>
+        <p>Projeto acadêmico de robótica com Arduino.</p>
+        <p>Desenvolvido para apresentação de final de ano.</p>
+        <small>© <span id="year"></span> - Todos os direitos reservados.</small>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
